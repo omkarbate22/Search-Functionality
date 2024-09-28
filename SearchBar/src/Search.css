@@ -1,0 +1,137 @@
+/* Styles for the search container */
+.Search-top {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+input[type="text"]::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Styles for the search result container */
+.Search-Result {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  justify-items: center;
+}
+
+/* Styling individual search result items */
+.Search-Result div {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.Search-Result div:hover {/* Styles for the search container */
+    .Search-top {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      position: relative; /* Position relative for absolute positioning of results */
+    }
+    
+    input[type="text"] {
+      width: 300px; /* Adjust width as needed */
+      padding: 12px 20px;
+      border: 2px solid #ccc;
+      border-radius: 25px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+      position: relative;
+    }
+    
+    input[type="text"]:focus {
+      border-color: #007bff;
+    }
+    
+    input[type="text"]::placeholder {
+      color: #888;
+      font-style: italic;
+    }
+    
+    /* Styles for the search result container */
+    .Search-Result {
+      position: absolute; /* Absolute positioning relative to the input */
+      top: 100%; /* Align results directly below the input */
+      width: 100%; /* Make the result container the same width as the input */
+      max-height: 200px; /* Set a max height for the results with scrolling */
+      overflow-y: auto; /* Add scroll if the result exceeds max height */
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      border-radius: 8px;
+      z-index: 1000; /* Ensure it appears on top */
+      padding: 10px;
+    }
+    
+    /* Styling individual search result items */
+    .Search-Result div {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+      transition: background-color 0.3s;
+    }
+    
+    .Search-Result div:hover {
+      background-color: #0056b3; /* Change background on hover */
+    }
+    
+    /* Styling when no results are found */
+    .Search-Result div.no-results {
+      background-color: #f44336; /* Red background for no results */
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    /* Limit the container height when there are many results */
+    .Search-Result {
+      overflow-y: auto;
+      max-height: 150px;
+      padding: 10px 0;
+    }
+    
+    
+  background-color: #0056b3;
+}
+
+/* Styling when no results found */
+.Search-Result div.no-results {
+  background-color: #f44336; /* Red for no results */
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
